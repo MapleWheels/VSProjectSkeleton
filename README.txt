@@ -3,6 +3,9 @@ visit the Wiki.
 
 
 Quick Start Steps:
+
+1. Download the Libraries and place them in /Refs as shown below.
+
 - The libraries for this project must be downloaded separately. They can be found in the LuaCsForBarotrauma Steam Workshop
 folder under the subfolder "Publicized". Just copy the ones listed below into "/Refs". 
 - The file-folder structure should match the following:
@@ -26,3 +29,11 @@ Property Group:
 <ModDeployDir>..\LUATRAMA_DEBUG_LOCALMODS_MYMODDIR\</ModDeployDir>
 
 Replace "..\LUATRAMA_DEBUG_LOCALMODS_MYMODDIR\" with the directory of your mod in "Barotrauma/LocalMods/" 
+
+
+2. Set the executable directory for the Launch Configurations (Client, Server).
+
+
+3. Set your details (modname, files, etc) in Assets/filelist.xml
+- Note: All files should be placed under "/Content" and will be copied automatically to "LocalMods/<YourMod>/Content/...".
+your "filelist.xml" should list your mods' content files in the format of "%ModDir%/Content/..."
