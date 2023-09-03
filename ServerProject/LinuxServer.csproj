@@ -11,7 +11,7 @@
         <HintPath>..\Refs\0Harmony.dll</HintPath>
       </Reference>
       <Reference Include="DedicatedServer">
-        <HintPath>..\Refs\DedicatedServer.dll</HintPath>
+        <HintPath>..\Refs\Linux\DedicatedServer.dll</HintPath>
       </Reference>
       <Reference Include="Farseer.NetStandard">
         <HintPath>..\Refs\Farseer.NetStandard.dll</HintPath>

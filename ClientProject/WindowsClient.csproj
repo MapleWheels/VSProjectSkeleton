@@ -27,7 +27,7 @@
       <HintPath>..\Refs\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Barotrauma">
-      <HintPath>..\Refs\Barotrauma.dll</HintPath>
+      <HintPath>..\Refs\Windows\Barotrauma.dll</HintPath>
     </Reference>
     <Reference Include="Farseer.NetStandard">
       <HintPath>..\Refs\Farseer.NetStandard.dll</HintPath>
