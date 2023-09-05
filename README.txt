@@ -10,9 +10,13 @@ Quick Start Steps:
 folder under the subfolder "Publicized". Just copy the ones listed below into "/Refs". 
 - The file-folder structure should match the following:
 
+./Linux/Barotrauma.dll
+./Linux/DedicatedServer.dll
+./Windows/Barotrauma.dll
+./Windows/DedicatedServer.dll
+./OSX/Barotrauma.dll
+./OSX/DedicatedServer.dll
 ./0Harmony.dll
-./Barotrauma.dll
-./DedicatedServer.dll
 ./Farseer.NetStandard.dll
 ./Lidgren.NetStandard.dll
 ./Mono.Cecil.dll
@@ -23,8 +27,15 @@ folder under the subfolder "Publicized". Just copy the ones listed below into "/
 ./XNATypes.dll
 
 
-For all 5 projects (WindowsClient, WindowsServer, LinuxClient, LinuxServer, Assets), you need to edit the .csproj 
-Property Group: 
+For all 7 projects (
+	WindowsClient, 
+	WindowsServer, 
+	LinuxClient, 
+	LinuxServer, 
+	OSXClient, 
+	OSXServer, 
+	Assets), 
+you need to edit the .csproj Property Group: 
 
 <ModDeployDir>..\LUATRAMA_DEBUG_LOCALMODS_MYMODDIR\</ModDeployDir>
 

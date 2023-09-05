@@ -21,6 +21,11 @@ namespace MyModName
             // Put code that interacts with other plugins here.
         }
 
+        public void PreInitPatching()
+        {
+            // Not yet supported: Called during the Barotrauma startup phase before vanilla content is loaded.
+        }
+
         public void Dispose()
         {
             // Cleanup your plugin!

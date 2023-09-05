@@ -5,6 +5,8 @@
 ./Linux/DedicatedServer.dll
 ./Windows/Barotrauma.dll
 ./Windows/DedicatedServer.dll
+./OSX/Barotrauma.dll
+./OSX/DedicatedServer.dll
 ./0Harmony.dll
 ./Farseer.NetStandard.dll
 ./Lidgren.NetStandard.dll
