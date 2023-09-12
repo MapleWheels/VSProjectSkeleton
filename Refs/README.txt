@@ -12,6 +12,7 @@
 ./Lidgren.NetStandard.dll
 ./Mono.Cecil.dll
 ./MonoGame.Framework.Linux.NetStandard.dll
+./MonoGame.Framework.MacOS.NetStandard.dll
 ./MonoGame.Framework.Windows.NetStandard.dll
 ./MonoMod.Common.dll
 ./MoonSharp.Interpreter.dll
