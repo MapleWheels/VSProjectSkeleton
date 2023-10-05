@@ -36,17 +36,10 @@
       </Reference>
     </ItemGroup>
 
-    <ItemGroup>
-      <Compile Include="..\ClientProject\ClientSource\Plugin.cs">
-        <Link>ClientSource\Plugin.cs</Link>
-      </Compile>
-    </ItemGroup>
+  <Import Project="..\SharedProject\SharedProject.projitems" Label="Shared" />
+  <Import Project="../Build.props"/>
 
   <PropertyGroup>
-    <!-- IMPORTANT: Should point to <Barotrauma_Install>\LocalMods\<MyModName>\ -->
-    <!-- IMPORTANT: ModDeplyDir Path must end with '\' -->
-    <ModDeployDir>..\LUATRAMA_DEBUG_LOCALMODS_MYMODDIR\</ModDeployDir>
-    <AssemblyName>MyModName</AssemblyName>
     <RootNamespace>$(SolutionName.Replace(" ", "_"))</RootNamespace>
     <PlatformTarget>x64</PlatformTarget>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
@@ -68,7 +61,5 @@
     <Copy SourceFiles="@(Assemblies)" DestinationFiles="$(ModDeployDir)bin\Client\OSX\$(TargetName).dll" />
     <Copy SourceFiles="@(DepsFiles)" DestinationFiles="$(ModDeployDir)bin\Client\OSX\$(TargetName).deps.json" />
   </Target>
-
-  <Import Project="..\SharedProject\SharedProject.projitems" Label="Shared" />
 
 </Project>

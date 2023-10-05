@@ -27,19 +27,18 @@ folder under the subfolder "Publicized". Just copy the ones listed below into "/
 ./XNATypes.dll
 
 
-For all 7 projects (
-	WindowsClient, 
-	WindowsServer, 
-	LinuxClient, 
-	LinuxServer, 
-	OSXClient, 
-	OSXServer, 
-	Assets), 
-you need to edit the .csproj Property Group: 
+You need to edit the Build.props file: 
 
 <ModDeployDir>..\LUATRAMA_DEBUG_LOCALMODS_MYMODDIR\</ModDeployDir>
 
 Replace "..\LUATRAMA_DEBUG_LOCALMODS_MYMODDIR\" with the directory of your mod in "Barotrauma/LocalMods/" 
+
+<AssemblyName>MyModName</AssemblyName>
+
+Replace "MyModName" with a valid assembly name, this should be similar to your mod name but does not need to match. This name should:
+- Not include spaces.
+- Not include special characters, periods are allowed.
+- Use english characters.
 
 
 2. Set the executable directory for the Launch Configurations (Client, Server).

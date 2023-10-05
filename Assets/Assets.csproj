@@ -8,6 +8,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Content Include="..\Build.props">
+        <Link>Build.props</Link>
+      </Content>
       <Content Include="..\README.txt">
         <Link>README.txt</Link>
       </Content>
@@ -17,12 +20,6 @@
       <Folder Include="Content" />
     </ItemGroup>
 
-    <PropertyGroup>
-        <!-- IMPORTANT: Should point to <Barotrauma_Install>\LocalMods\<MyModName>\ -->
-        <!-- IMPORTANT: ModDeplyDir Path must end with '\' -->
-        <ModDeployDir>..\LUATRAMA_DEBUG_LOCALMODS_MYMODDIR\</ModDeployDir>
-    </PropertyGroup>
-
     <Target Name="CopyFiles" AfterTargets="Build">
         <ItemGroup>
             <FileList Include="$(ProjectDir)filelist.xml" />
@@ -31,7 +28,7 @@
         </ItemGroup>
         <Copy SourceFiles="@(FileList)" DestinationFiles="$(ModDeployDir)filelist.xml" />
         <Copy SourceFiles="@(RunConfig)" DestinationFiles="$(ModDeployDir)CSharp\RunConfig.xml" />
-        <Copy SourceFiles="@(Content)" DestinationFolder="$(ModDeployDir)Content\%(RecursiveDir)"/>
+        <Copy SourceFiles="@(Content)" DestinationFolder="$(ModDeployDir)Content\%(RecursiveDir)" />
     </Target>
 
 

@@ -11,6 +11,8 @@
   </PropertyGroup>
 
   <Import Project="..\SharedProject\SharedProject.projitems" Label="Shared" />
+  <Import Project="../Build.props"/>
+  
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <DefineConstants>TRACETRACE;CLIENT;WINDOWS</DefineConstants>
@@ -53,10 +55,6 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <!-- IMPORTANT: Should point to <Barotrauma_Install>\LocalMods\<MyModName>\ -->
-    <!-- IMPORTANT: ModDeplyDir Path must end with '\' -->
-    <ModDeployDir>..\LUATRAMA_DEBUG_LOCALMODS_MYMODDIR\</ModDeployDir>
-    <AssemblyName>MyModName</AssemblyName>
     <RootNamespace>$(SolutionName.Replace(" ", "_"))</RootNamespace>
     <PlatformTarget>x64</PlatformTarget>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
