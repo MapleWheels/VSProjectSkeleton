@@ -9,9 +9,8 @@
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
-
-  <Import Project="..\SharedProject\SharedProject.projitems" Label="Shared" />
-  <Import Project="../Build.props"/>
+  
+  <Import Project="../Build.props" />
   
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -36,6 +35,9 @@
     </Reference>
     <Reference Include="Lidgren.NetStandard">
       <HintPath>..\Refs\Lidgren.NetStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="ModdingToolkit">
+      <HintPath>..\Refs\ModdingToolkit\Client\Windows\ModdingToolkit.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Cecil">
       <HintPath>..\Refs\Mono.Cecil.dll</HintPath>

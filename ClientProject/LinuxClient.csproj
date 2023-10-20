@@ -5,6 +5,22 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
+    
+    <Import Project="../Build.props" />
+
+    <PropertyGroup>
+        <RootNamespace>$(SolutionName.Replace(" ", "_"))</RootNamespace>
+        <PlatformTarget>x64</PlatformTarget>
+        <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DefineConstants>TRACE;CLIENT;LINUX</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DefineConstants>TRACE;CLIENT;LINUX</DefineConstants>
+    </PropertyGroup>
 
     <ItemGroup>
       <Reference Include="0Harmony">
@@ -18,6 +34,9 @@
       </Reference>
       <Reference Include="Lidgren.NetStandard">
         <HintPath>..\Refs\Lidgren.NetStandard.dll</HintPath>
+      </Reference>
+      <Reference Include="ModdingToolkit">
+        <HintPath>..\Refs\ModdingToolkit\Client\Linux\ModdingToolkit.dll</HintPath>
       </Reference>
       <Reference Include="Mono.Cecil">
         <HintPath>..\Refs\Mono.Cecil.dll</HintPath>
@@ -35,23 +54,6 @@
         <HintPath>..\Refs\XNATypes.dll</HintPath>
       </Reference>
     </ItemGroup>
-
-    <Import Project="..\SharedProject\SharedProject.projitems" Label="Shared" />
-    <Import Project="../Build.props"/>
-
-    <PropertyGroup>
-        <RootNamespace>$(SolutionName.Replace(" ", "_"))</RootNamespace>
-        <PlatformTarget>x64</PlatformTarget>
-        <GenerateDocumentationFile>False</GenerateDocumentationFile>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <DefineConstants>TRACE;CLIENT;LINUX</DefineConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DefineConstants>TRACE;CLIENT;LINUX</DefineConstants>
-    </PropertyGroup>
 
     <Target Name="CopyFiles" AfterTargets="Build">
         <ItemGroup>
