@@ -19,6 +19,9 @@
       <Reference Include="Lidgren.NetStandard">
         <HintPath>..\Refs\Lidgren.NetStandard.dll</HintPath>
       </Reference>
+      <Reference Include="ModdingToolkit">
+        <HintPath>..\Refs\ModdingToolkit\Client\OSX\ModdingToolkit.dll</HintPath>
+      </Reference>
       <Reference Include="Mono.Cecil">
         <HintPath>..\Refs\Mono.Cecil.dll</HintPath>
       </Reference>
@@ -35,9 +38,8 @@
         <HintPath>..\Refs\XNATypes.dll</HintPath>
       </Reference>
     </ItemGroup>
-
-  <Import Project="..\SharedProject\SharedProject.projitems" Label="Shared" />
-  <Import Project="../Build.props"/>
+  
+  <Import Project="../Build.props" />
 
   <PropertyGroup>
     <RootNamespace>$(SolutionName.Replace(" ", "_"))</RootNamespace>
