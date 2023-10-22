@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RunConfig>
 <!--Options: "None" / "Forced" (always) / "Standard" (when enabled)-->
-  <Server>None</Server>
-  <Client>Forced</Client>
-  <Dependencies>
-    <Dependency>
-	  <PackageName>modding toolkit</PackageName>
-	</Dependency>
-  </Dependencies>
+  <Server>Standard</Server>
+  <Client>Standard</Client>
 </RunConfig>

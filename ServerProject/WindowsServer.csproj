@@ -12,24 +12,21 @@
 
   <Import Project="..\SharedProject\SharedProject.projitems" Label="Shared" />
   <Import Project="../Build.props"/>
-  
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <DefineConstants>TRACETRACE;CLIENT;WINDOWS</DefineConstants>
-    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DefineConstants>TRACETRACE;SERVER;WINDOWS</DefineConstants>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <DefineConstants>TRACETRACE;CLIENT;WINDOWS</DefineConstants>
-    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DefineConstants>TRACETRACE;SERVER;WINDOWS</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>..\Refs\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="Barotrauma">
-      <HintPath>..\Refs\Windows\Barotrauma.dll</HintPath>
+    <Reference Include="DedicatedServer">
+      <HintPath>..\Refs\Windows\DedicatedServer.dll</HintPath>
     </Reference>
     <Reference Include="Farseer.NetStandard">
       <HintPath>..\Refs\Farseer.NetStandard.dll</HintPath>
@@ -65,8 +62,8 @@
       <Assemblies Include="$(TargetDir)$(TargetName).dll" />
       <DepsFiles Include="$(TargetDir)$(TargetName).deps.json" />
     </ItemGroup>
-    <Copy SourceFiles="@(Assemblies)" DestinationFiles="$(ModDeployDir)bin\Client\Windows\$(TargetName).dll" />
-    <Copy SourceFiles="@(DepsFiles)" DestinationFiles="$(ModDeployDir)bin\Client\Windows\$(TargetName).deps.json" />
+    <Copy SourceFiles="@(Assemblies)" DestinationFiles="$(ModDeployDir)bin\Server\Windows\$(TargetName).dll" />
+    <Copy SourceFiles="@(DepsFiles)" DestinationFiles="$(ModDeployDir)bin\Server\Windows\$(TargetName).deps.json" />
   </Target>
 
 </Project>

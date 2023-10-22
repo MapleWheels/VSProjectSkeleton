@@ -10,8 +10,8 @@
       <Reference Include="0Harmony">
         <HintPath>..\Refs\0Harmony.dll</HintPath>
       </Reference>
-      <Reference Include="Barotrauma">
-        <HintPath>..\Refs\Linux\Barotrauma.dll</HintPath>
+      <Reference Include="DedicatedServer">
+        <HintPath>..\Refs\Linux\DedicatedServer.dll</HintPath>
       </Reference>
       <Reference Include="Farseer.NetStandard">
         <HintPath>..\Refs\Farseer.NetStandard.dll</HintPath>
@@ -46,11 +46,11 @@
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <DefineConstants>TRACE;CLIENT;LINUX</DefineConstants>
+      <DefineConstants>TRACE;SERVER;LINUX</DefineConstants>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <DefineConstants>TRACE;CLIENT;LINUX</DefineConstants>
+      <DefineConstants>TRACE;SERVER;LINUX</DefineConstants>
     </PropertyGroup>
 
     <Target Name="CopyFiles" AfterTargets="Build">
@@ -58,8 +58,8 @@
             <Assemblies Include="$(TargetDir)$(TargetName).dll" />
             <DepsFiles Include="$(TargetDir)$(TargetName).deps.json" />
         </ItemGroup>
-        <Copy SourceFiles="@(Assemblies)" DestinationFiles="$(ModDeployDir)bin\Client\Linux\$(TargetName).dll" />
-        <Copy SourceFiles="@(DepsFiles)" DestinationFiles="$(ModDeployDir)bin\Client\Linux\$(TargetName).deps.json" />
+        <Copy SourceFiles="@(Assemblies)" DestinationFiles="$(ModDeployDir)bin\Server\Linux\$(TargetName).dll" />
+        <Copy SourceFiles="@(DepsFiles)" DestinationFiles="$(ModDeployDir)bin\Server\Linux\$(TargetName).deps.json" />
     </Target>
-    
+
 </Project>
