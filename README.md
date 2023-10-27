@@ -10,6 +10,7 @@ Quick Start Steps:
 folder under the subfolder "Publicized". Just copy the ones listed below into "/Refs". 
 - The file-folder structure should match the following:
 
+```
 ./Linux/Barotrauma.dll
 ./Linux/DedicatedServer.dll
 ./Windows/Barotrauma.dll
@@ -26,7 +27,7 @@ folder under the subfolder "Publicized". Just copy the ones listed below into "/
 ./MonoMod.Common.dll
 ./MoonSharp.Interpreter.dll
 ./XNATypes.dll
-
+```
 
 You need to edit the Build.props file: 
 
