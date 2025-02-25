@@ -14,7 +14,7 @@
         <HintPath>..\Refs\OSX\DedicatedServer.dll</HintPath>
       </Reference>
       <Reference Include="BarotraumaCore">
-        <HintPath>..\Refs\Linux\BarotraumaCore.dll</HintPath>
+        <HintPath>..\Refs\OSX\BarotraumaCore.dll</HintPath>
       </Reference>
       <Reference Include="Farseer.NetStandard">
         <HintPath>..\Refs\Farseer.NetStandard.dll</HintPath>
