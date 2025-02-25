@@ -13,7 +13,7 @@
       <Reference Include="Barotrauma">
         <HintPath>..\Refs\Linux\Barotrauma.dll</HintPath>
       </Reference>
-	  <Reference Include="BarotraumaCore">
+      <Reference Include="BarotraumaCore">
         <HintPath>..\Refs\Linux\BarotraumaCore.dll</HintPath>
       </Reference>
       <Reference Include="Farseer.NetStandard">
