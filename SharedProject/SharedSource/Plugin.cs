@@ -4,6 +4,10 @@ using System.Collections.Immutable;
 using System.Text;
 using Barotrauma;
 
+[assembly: IgnoresAccessChecksTo("Barotrauma")]
+[assembly: IgnoresAccessChecksTo("DedicatedServer")]
+[assembly: IgnoresAccessChecksTo("BarotraumaCore")]
+
 namespace MyModName
 {
     public partial class Plugin : IAssemblyPlugin
