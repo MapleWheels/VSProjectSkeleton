@@ -12,10 +12,13 @@ folder under the subfolder "Publicized". Just copy the ones listed below into "/
 
 ```
 ./Linux/Barotrauma.dll
+./Linux/BarotraumaCore.dll
 ./Linux/DedicatedServer.dll
 ./Windows/Barotrauma.dll
+./Windows/BarotraumaCore.dll
 ./Windows/DedicatedServer.dll
 ./OSX/Barotrauma.dll
+./OSX/BarotraumaCore.dll
 ./OSX/DedicatedServer.dll
 ./0Harmony.dll
 ./Farseer.NetStandard.dll
