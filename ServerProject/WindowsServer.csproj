@@ -65,8 +65,8 @@
       <Assemblies Include="$(TargetDir)$(TargetName).dll" />
       <DepsFiles Include="$(TargetDir)$(TargetName).deps.json" />
     </ItemGroup>
-    <Copy SourceFiles="@(Assemblies)" DestinationFiles="$(ModDeployDir)bin\Server\Windows\$(TargetName).dll" />
-    <Copy SourceFiles="@(DepsFiles)" DestinationFiles="$(ModDeployDir)bin\Server\Windows\$(TargetName).deps.json" />
+    <Copy SourceFiles="@(Assemblies)" DestinationFiles="$(ModDeployDir)Binaries\Server\Windows\$(TargetName).dll" />
+    <Copy SourceFiles="@(DepsFiles)" DestinationFiles="$(ModDeployDir)Binaries\Server\Windows\$(TargetName).deps.json" />
   </Target>
 
 </Project>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModConfig>
+    <Assemblies>
+        <Folder Path="Binaries/"/>
+    </Assemblies>
+    <Lua>
+        
+    </Lua>
+    <Config>
+        
+    </Config>
+</ModConfig>
