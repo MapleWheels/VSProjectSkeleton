@@ -15,10 +15,6 @@
       </Content>
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Content" />
-    </ItemGroup>
-
     <Target Name="CopyFiles" AfterTargets="Build">
         <ItemGroup>
             <Content Include="$(ProjectDir)Content\**\*.*" />

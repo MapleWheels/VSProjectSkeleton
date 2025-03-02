@@ -1,12 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModConfig>
-    <Assemblies>
-        <Folder Path="Binaries/"/>
-    </Assemblies>
-    <Lua>
-        
-    </Lua>
-    <Config>
-        
-    </Config>
+    <!-- Notes:
+        - 'Platform', 'Target' and 'Culture' will be set to 'Any' if unspecified.
+        - A value of 'default' will make the resource be used only if none other is available.
+    -->
+    <Assembly Folder="Binaries/Client/Windows" Platform="Windows" Target="Client"/>
+    <Assembly Folder="Binaries/Client/Linux" Platform="Linux" Target="Client"/>
+    <Assembly Folder="Binaries/Client/OSX" Platform="OSX" Target="Client"/>
+    <Assembly Folder="Binaries/Server/Windows" Platform="Windows" Target="Server"/>
+    <Assembly Folder="Binaries/Server/Linux" Platform="Linux" Target="Server"/>
+    <Assembly Folder="Binaries/Server/OSX" Platform="OSX" Target="Server"/>
+    <Config File="Config/ConfigsClient.xml" Target="Client"/>
+    <Config File="Config/ConfigsServer.xml" Target="Server"/>
+    <Config File="Config/ConfigsShared.xml" Target="Any"/>
+    <Config File="Config/ProfilesClient.xml" Target="Client"/>
+    <Config File="Config/ProfilesServer.xml" Target="Server"/>
+    <Config File="Config/ProfilesShared.xml" Target="Any"/>
+    <Localization File="Localizations/English.xml" Culture="default"/>
+    <Lua Folder="Lua/Client" Target="Client"/>
+    <!-- RunFile Specifies files to execute automatically. Will default to legacy 'autorun.lua' if not specified for 
+    a given platform and target at runtime. -->
+    <Lua File="Lua/Client/Bootloader.lua" Target="Client" RunFile="true"/> 
+    <Lua Folder="Lua/Server" Target="Server"/>
+    <Lua File="Lua/Server/Bootloader.lua" Target="Server" RunFile="true"/>
+    <Lua Folder="Lua/Shared" Target="Any"/>
+    <!-- Styles are only loaded on the client, 'Target' does nothing. -->
+    <Style File="Styles/Styles.xml" Platform="Any"/> 
 </ModConfig>

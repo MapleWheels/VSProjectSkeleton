@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+    <Configs>
+        <Config Name="SampleControlKey1" Type="MouseKeys" Value="Keys.G" DisplayName=""/>
+    </Configs>
+</Configuration>

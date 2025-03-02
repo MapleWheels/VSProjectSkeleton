@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration>
+    <Configs>
+        <Config Name="SampleBool1" Type="bool" Value="true" DisplayName="%%Cfg-SampleBool1%%"/>
+        <Config Name="SampleRangeFloat1" Type="single" Value="0.9" Min="0" Max="1" Steps="11" 
+                DisplayName="%%Cfg-SampleRangeFloat1%%"/>
+        <Config Name="SampleRangeInt1" Type="int32" Value="40" Min="0" Max="100" Steps="21" 
+                DisplayName="%%Cfg-SampleRangeInt1%%"/>
+        <Config Name="SampleFloat1" Type="single" Value="30" DisplayName="%%Cfg-SampleFloat1%%"/>
+        <Config Name="SampleInt1" Type="int32" Value="200" DisplayName="%%Cfg-SampleInt1%%"/>
+        <Config Name="SampleString" Type="string" Value="help" DisplayName="%%Cfg-SampleString%%"/>
+    </Configs>
+    <Profiles>
+        <Profile Name="Profile1-Easy" DisplayName="%Profile1%">
+            <ConfigValue Name="SampleBool1" Value="false"/>
+            <ConfigValue Name="SampleRangeFloat1" Value="0.5"/>
+            <ConfigValue Name="SampleRangeInt1" Value="60"/>
+            <ConfigValue Name="SampleFloat1" Value="25"/>
+            <ConfigValue Name="SampleInt1" Value="150"/>
+        </Profile>
+    </Profiles>
+</Configuration>
