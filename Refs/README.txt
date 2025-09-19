@@ -14,6 +14,6 @@
 ./MonoGame.Framework.Linux.NetStandard.dll
 ./MonoGame.Framework.MacOS.NetStandard.dll
 ./MonoGame.Framework.Windows.NetStandard.dll
-./MonoMod.Common.dll
+./MonoMod.Utils.dll
 ./MoonSharp.Interpreter.dll
 ./XNATypes.dll
