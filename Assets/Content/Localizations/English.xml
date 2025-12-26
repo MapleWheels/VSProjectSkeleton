@@ -7,5 +7,9 @@
         <Text Key="Cfg-SampleFloat1">Sample Float</Text>
         <Text Key="Cfg-SampleInt1">Sample Int</Text>
         <Text Key="Cfg-SampleString">Sample String</Text>
+        <Text Key="Cfg-SampleDropDown">Sample DropDown</Text>
+        <Text Key="Cfg-DropDownItem0">Drop Down 0</Text>
+        <Text Key="Cfg-DropDownItem1">Drop Down 1</Text>
+        <Text Key="Cfg-DropDownItem2">Drop Down 2</Text>
     </Culture>
 </Localization>

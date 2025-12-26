@@ -3,6 +3,9 @@
     <!-- Notes:
         - 'Platform', 'Target' and 'Culture' will be set to 'Any' if unspecified.
         - A value of 'default' will make the resource be used only if none other is available.
+        - Different Cultures/Regions can be specified, separated by ','.
+        - Priority determines loading order, lower numbers load earlier. Default priority is '0'.
+        - 'RunFile' determines whether the resource will be executed automatically (for code only), `true` by default. 
     -->
     <Assembly Folder="Binaries/Client/Windows" Platform="Windows" Target="Client"/>
     <Assembly Folder="Binaries/Client/Linux" Platform="Linux" Target="Client"/>
@@ -16,14 +19,21 @@
     <Config File="Config/ProfilesClient.xml" Target="Client"/>
     <Config File="Config/ProfilesServer.xml" Target="Server"/>
     <Config File="Config/ProfilesShared.xml" Target="Any"/>
+    <Localization File="Localizations/English.xml" Culture="en-us"/>
     <Localization File="Localizations/English.xml" Culture="default"/>
-    <Lua Folder="Lua/Client" Target="Client"/>
+    <Lua Folder="Lua/Client" Target="Client" RunFile="false"/>
+    <Lua Folder="Lua/Server" Target="Server" RunFile="false"/>
+    <Lua Folder="Lua/Shared" Target="Any" RunFile="false"/>
+    <Lua Folder="lua/XMod/SampleMod2/Init.lua" Target="Any"
+         Priority="2" Name="SampleMod2XScript">
+        <Dependencies>
+            <Dependency PackageName="SampleMod2"/>
+        </Dependencies>
+    </Lua>
     <!-- RunFile Specifies files to execute automatically. Will default to legacy 'autorun.lua' if not specified for 
-    a given platform and target at runtime. -->
-    <Lua File="Lua/Client/Bootloader.lua" Target="Client" RunFile="true"/> 
-    <Lua Folder="Lua/Server" Target="Server"/>
-    <Lua File="Lua/Server/Bootloader.lua" Target="Server" RunFile="true"/>
-    <Lua Folder="Lua/Shared" Target="Any"/>
+a given platform and target at runtime. -->
+    <Lua File="Lua/Autorun/Client.lua" Target="Client"/>
+    <Lua File="Lua/Autorun/Server.lua" Target="Server"/>
     <!-- Styles are only loaded on the client, 'Target' does nothing. -->
     <Style File="Styles/Styles.xml" Platform="Any"/> 
 </ModConfig>

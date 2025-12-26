@@ -2,13 +2,23 @@
 <Configuration>
     <Configs>
         <Config Name="SampleBool1" Type="bool" Value="true" DisplayName="%%Cfg-SampleBool1%%"/>
-        <Config Name="SampleRangeFloat1" Type="single" Value="0.9" Min="0" Max="1" Steps="11" 
+        <Config Name="SampleRangeFloat1" Type="float" Value="0.9" Min="0" Max="1" Steps="11" 
                 DisplayName="%%Cfg-SampleRangeFloat1%%"/>
-        <Config Name="SampleRangeInt1" Type="int32" Value="40" Min="0" Max="100" Steps="21" 
+        <Config Name="SampleRangeInt1" Type="int" Value="40" Min="0" Max="100" Steps="21" 
                 DisplayName="%%Cfg-SampleRangeInt1%%"/>
         <Config Name="SampleFloat1" Type="single" Value="30" DisplayName="%%Cfg-SampleFloat1%%"/>
-        <Config Name="SampleInt1" Type="int32" Value="200" DisplayName="%%Cfg-SampleInt1%%"/>
+        <Config Name="SampleInt1" Type="int" Value="200" DisplayName="%%Cfg-SampleInt1%%"/>
         <Config Name="SampleString" Type="string" Value="help" DisplayName="%%Cfg-SampleString%%"/>
+        <Config Name="SampleDropDown" Type="List<string>" DisplayName="%%Cfg-SampleDropDown%%">
+            <Value>
+                <Selection Value="%%Cfg-DropDownItem0%%"/>
+                <List>
+                    <Item Value="%%Cfg-DropDownItem0%%"/>
+                    <Item Value="%%Cfg-DropDownItem1%%"/>
+                    <Item Value="%%Cfg-DropDownItem2%%"/>
+                </List>
+            </Value>
+        </Config>
     </Configs>
     <Profiles>
         <Profile Name="Profile1-Easy" DisplayName="%Profile1%">
