@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ModConfig>
+<ModConfig InternalModName="MyModName">
     <!-- Notes:
         - 'Platform', 'Target' and 'Culture' will be set to 'Any' if unspecified.
         - A value of 'default' will make the resource be used only if none other is available.
@@ -19,21 +19,17 @@
     <Config File="Config/ProfilesClient.xml" Target="Client"/>
     <Config File="Config/ProfilesServer.xml" Target="Server"/>
     <Config File="Config/ProfilesShared.xml" Target="Any"/>
-    <Localization File="Localizations/English.xml" Culture="en-us"/>
-    <Localization File="Localizations/English.xml" Culture="default"/>
     <Lua Folder="Lua/Client" Target="Client" RunFile="false"/>
     <Lua Folder="Lua/Server" Target="Server" RunFile="false"/>
     <Lua Folder="Lua/Shared" Target="Any" RunFile="false"/>
-    <Lua Folder="lua/XMod/SampleMod2/Init.lua" Target="Any"
-         Priority="2" Name="SampleMod2XScript">
-        <Dependencies>
-            <Dependency PackageName="SampleMod2"/>
-        </Dependencies>
-    </Lua>
-    <!-- RunFile Specifies files to execute automatically. Will default to legacy 'autorun.lua' if not specified for 
+    <!-- RunFile specifies files to execute automatically. Will default to legacy 'autorun.lua' if not specified for 
 a given platform and target at runtime. -->
     <Lua File="Lua/Autorun/Client.lua" Target="Client"/>
     <Lua File="Lua/Autorun/Server.lua" Target="Server"/>
-    <!-- Styles are only loaded on the client, 'Target' does nothing. -->
-    <Style File="Styles/Styles.xml" Platform="Any"/> 
+    <!-- Conditional loading dependencies example -->
+    <FileGroup>
+        <Condtional Dependencies="dynamiceuropa" IsLoaded="false"/>
+        <Condtional Dependencies="mechtrauma" IsLoaded="true"/>
+        <Lua Folder="Lua/Mechtrauma/Shared" Target="Client" RunFile="true"/>
+    </FileGroup>    
 </ModConfig>
