@@ -7,29 +7,26 @@
         - Priority determines loading order, lower numbers load earlier. Default priority is '0'.
         - 'RunFile' determines whether the resource will be executed automatically (for code only), `true` by default. 
     -->
-    <Assembly Folder="Binaries/Client/Windows" Platform="Windows" Target="Client"/>
-    <Assembly Folder="Binaries/Client/Linux" Platform="Linux" Target="Client"/>
-    <Assembly Folder="Binaries/Client/OSX" Platform="OSX" Target="Client"/>
-    <Assembly Folder="Binaries/Server/Windows" Platform="Windows" Target="Server"/>
-    <Assembly Folder="Binaries/Server/Linux" Platform="Linux" Target="Server"/>
-    <Assembly Folder="Binaries/Server/OSX" Platform="OSX" Target="Server"/>
-    <Config File="Config/ConfigsClient.xml" Target="Client"/>
-    <Config File="Config/ConfigsServer.xml" Target="Server"/>
-    <Config File="Config/ConfigsShared.xml" Target="Any"/>
-    <Config File="Config/ProfilesClient.xml" Target="Client"/>
-    <Config File="Config/ProfilesServer.xml" Target="Server"/>
-    <Config File="Config/ProfilesShared.xml" Target="Any"/>
-    <Lua Folder="Lua/Client" Target="Client" RunFile="false"/>
-    <Lua Folder="Lua/Server" Target="Server" RunFile="false"/>
-    <Lua Folder="Lua/Shared" Target="Any" RunFile="false"/>
+    <Assembly Folder="%ModDir%/Binaries/Client/Windows" Platform="Windows" Target="Client"/>
+    <Assembly Folder="%ModDir%/Binaries/Client/Linux" Platform="Linux" Target="Client"/>
+    <Assembly Folder="%ModDir%/Binaries/Client/OSX" Platform="OSX" Target="Client"/>
+    <Assembly Folder="%ModDir%/Binaries/Server/Windows" Platform="Windows" Target="Server"/>
+    <Assembly Folder="%ModDir%/Binaries/Server/Linux" Platform="Linux" Target="Server"/>
+    <Assembly Folder="%ModDir%/Binaries/Server/OSX" Platform="OSX" Target="Server"/>
+    <Config File="%ModDir%/Config/ConfigsClient.xml" Target="Client"/>
+    <Config File="%ModDir%/Config/ConfigsServer.xml" Target="Server"/>
+    <Config File="%ModDir%/Config/ConfigsShared.xml" Target="Any"/>
+    <Lua Folder="%ModDir%/Lua/Client" Target="Client" RunFile="false"/>
+    <Lua Folder="%ModDir%/Lua/Server" Target="Server" RunFile="false"/>
+    <Lua Folder="%ModDir%/Lua/Shared" Target="Any" RunFile="false"/>
     <!-- RunFile specifies files to execute automatically. Will default to legacy 'autorun.lua' if not specified for 
 a given platform and target at runtime. -->
-    <Lua File="Lua/Autorun/Client.lua" Target="Client"/>
-    <Lua File="Lua/Autorun/Server.lua" Target="Server"/>
+    <Lua File="%ModDir%/Lua/Autorun/Client.lua" Target="Client"/>
+    <Lua File="%ModDir%/Lua/Autorun/Server.lua" Target="Server"/>
     <!-- Conditional loading dependencies example -->
     <FileGroup>
         <Condtional Dependencies="dynamiceuropa" IsLoaded="false"/>
         <Condtional Dependencies="mechtrauma" IsLoaded="true"/>
-        <Lua Folder="Lua/Mechtrauma/Shared" Target="Client" RunFile="true"/>
+        <Lua Folder="%ModDir%/Lua/Mechtrauma/Shared" Target="Client" RunFile="true"/>
     </FileGroup>    
 </ModConfig>
