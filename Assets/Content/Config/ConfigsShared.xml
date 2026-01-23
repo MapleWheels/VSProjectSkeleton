@@ -7,8 +7,8 @@
         <Setting Name="SampleFloat1" Type="single" Value="30"/>
         <Setting Name="SampleInt1" Type="int" Value="200"/>
         <Setting Name="SampleString" Type="string" Value="help"/>
-        <Setting Name="SampleHiddenString" Type="string" Value="hiddenEntry" AccessInMenus="false"/>
-        <Setting Name="SampleMenuOnlyString" Type="string" Value="menu only baby" AccessInConsole="false"/>
+        <Setting Name="SampleHiddenString" Type="string" Value="ConsoleOnly" ReadOnly="false" AllowChangesWhileExecuting="false"
+		NetSync="ServerAuthority" ShowInMenus="false"/>
         <Setting Name="SampleDropDown" Type="List<string>">
             <Value>
                 <List>
