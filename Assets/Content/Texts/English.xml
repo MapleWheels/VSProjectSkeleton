@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<infotexts language="English" nowhitespace="false" translatedname="English">
+    <!-- Sample Client Setting -->
+    <MyModName.SampleSettingClient.DisplayName>Sample Client Setting</MyModName.SampleSettingClient.DisplayName>
+    <MyModName.SampleSettingClient.DisplayCategory>Sample</MyModName.SampleSettingClient.DisplayCategory>
+    <MyModName.SampleSettingClient.Tooltip>Sample tooltip!</MyModName.SampleSettingClient.Tooltip>
+
+    <!-- Sample Server Setting -->
+    <MyModName.SampleSettingServer.DisplayName>Sample Server Setting</MyModName.SampleSettingServer.DisplayName>
+    <MyModName.SampleSettingServer.DisplayCategory>Sample</MyModName.SampleSettingServer.DisplayCategory>
+    <MyModName.SampleSettingServer.Tooltip>Sample tooltip!</MyModName.SampleSettingServer.Tooltip>
+
+    <!-- Sample Shared Setting -->
+    <MyModName.SampleSettingShared.DisplayName>Sample Shared Setting</MyModName.SampleSettingShared.DisplayName>
+    <MyModName.SampleSettingShared.DisplayCategory>Sample</MyModName.SampleSettingShared.DisplayCategory>
+    <MyModName.SampleSettingShared.Tooltip>Sample tooltip!</MyModName.SampleSettingShared.Tooltip>
+</infotexts>

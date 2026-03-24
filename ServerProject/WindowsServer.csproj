@@ -8,6 +8,7 @@
     <Authors />
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <Import Project="..\SharedProject\SharedProject.projitems" Label="Shared" />
@@ -22,35 +23,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\Refs\0Harmony.dll</HintPath>
-    </Reference>
     <Reference Include="DedicatedServer">
       <HintPath>..\Refs\Windows\DedicatedServer.dll</HintPath>
     </Reference>
     <Reference Include="BarotraumaCore">
       <HintPath>..\Refs\Windows\BarotraumaCore.dll</HintPath>
     </Reference>
-    <Reference Include="Farseer.NetStandard">
-      <HintPath>..\Refs\Farseer.NetStandard.dll</HintPath>
-    </Reference>
-    <Reference Include="Lidgren.NetStandard">
-      <HintPath>..\Refs\Lidgren.NetStandard.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Cecil">
-      <HintPath>..\Refs\Mono.Cecil.dll</HintPath>
-    </Reference>
     <Reference Include="MonoGame.Framework.Windows.NetStandard">
       <HintPath>..\Refs\MonoGame.Framework.Windows.NetStandard.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoMod.Utils">
-      <HintPath>..\Refs\MonoMod.Utils.dll</HintPath>
-    </Reference>
-    <Reference Include="MoonSharp.Interpreter">
-      <HintPath>..\Refs\MoonSharp.Interpreter.dll</HintPath>
-    </Reference>
-    <Reference Include="XNATypes">
-      <HintPath>..\Refs\XNATypes.dll</HintPath>
     </Reference>
   </ItemGroup>
 

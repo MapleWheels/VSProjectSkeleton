@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Shared settings -->
+<Configuration>
+    <Settings>
+        <Setting Name="SampleSettingShared" Type="string" Value="This is a sample!" />
+    </Settings>
+</Configuration>

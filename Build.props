@@ -1,4 +1,28 @@
 <Project>
+    <ItemGroup>
+        <!-- /Refs/ Path References-->
+        <Reference Include="Farseer.NetStandard">
+            <HintPath>..\Refs\Farseer.NetStandard.dll</HintPath>
+        </Reference>
+        <Reference Include="Lidgren.NetStandard">
+            <HintPath>..\Refs\Lidgren.NetStandard.dll</HintPath>
+        </Reference>
+        <Reference Include="Mono.Cecil">
+            <HintPath>..\Refs\Mono.Cecil.dll</HintPath>
+        </Reference>
+        <Reference Include="MoonSharp.Interpreter">
+            <HintPath>..\Refs\MoonSharp.Interpreter.dll</HintPath>
+        </Reference>
+        <Reference Include="XNATypes">
+            <HintPath>..\Refs\XNATypes.dll</HintPath>
+        </Reference>
+
+        <!-- NuGet Package References -->
+        <PackageReference Include="HarmonyX" Version="2.16.0" />
+        <PackageReference Include="LightInject" Version="6.6.4" />
+        <PackageReference Include="OneOf" Version="3.0.271" />
+        <PackageReference Include="FluentResults" Version="3.16.0" />
+    </ItemGroup>
     <PropertyGroup>
         <!-- IMPORTANT: Should point to <Barotrauma_Install>\LocalMods\<MyModName>\ -->
         <!-- IMPORTANT: ModDeplyDir Path must end with '\' -->

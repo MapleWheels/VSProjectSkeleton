@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Text;
-using Barotrauma;
-
-using System.Runtime.CompilerServices;
-[assembly: IgnoresAccessChecksTo("Barotrauma")]
-[assembly: IgnoresAccessChecksTo("DedicatedServer")]
-[assembly: IgnoresAccessChecksTo("BarotraumaCore")]
-
-namespace MyModName
+﻿namespace MyModName
 {
     public partial class Plugin : IAssemblyPlugin
     {
+        // These are automatically assigned by the plugin service after the Constructor is called
+        public IConfigService ConfigService { get; set; }
+        public IPluginManagementService PluginService { get; set; }
+        
         public void Initialize()
         {
-            // When your plugin is loading, use this instead of the constructor
+            // When your plugin is loading, use this instead of the constructor for code relying on
+            // the services above.
+            
             // Put any code here that does not rely on other plugins.
             throw new NotImplementedException();
         }
@@ -28,7 +23,7 @@ namespace MyModName
 
         public void PreInitPatching()
         {
-            // Not yet supported: Called during the Barotrauma startup phase before vanilla content is loaded.
+            //Called right after the constructor
         }
 
         public void Dispose()
