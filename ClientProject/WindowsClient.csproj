@@ -1,20 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <Platforms>x64</Platforms>
-    <Authors />
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
-    <LangVersion>latest</LangVersion>
-  </PropertyGroup>
-
   <Import Project="..\SharedProject\SharedProject.projitems" Label="Shared" />
   <Import Project="../Build.props"/>
   
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <DefineConstants>TRACETRACE;CLIENT;WINDOWS</DefineConstants>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
@@ -37,12 +24,6 @@
     </Reference>
   </ItemGroup>
 
-  <PropertyGroup>
-    <RootNamespace>$(SolutionName.Replace(" ", "_"))</RootNamespace>
-    <PlatformTarget>x64</PlatformTarget>
-    <GenerateDocumentationFile>False</GenerateDocumentationFile>
-  </PropertyGroup>
-
   <Target Name="CopyFiles" AfterTargets="Build">
     <ItemGroup>
       <Assemblies Include="$(TargetDir)$(TargetName).dll" />
@@ -51,5 +32,4 @@
     <Copy SourceFiles="@(Assemblies)" DestinationFiles="$(ModDeployDir)bin\Client\Windows\$(TargetName).dll" />
     <Copy SourceFiles="@(DepsFiles)" DestinationFiles="$(ModDeployDir)bin\Client\Windows\$(TargetName).deps.json" />
   </Target>
-
 </Project>
